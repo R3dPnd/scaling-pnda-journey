@@ -6,7 +6,7 @@ export default function () {
     return (
         <>
             <DialogTitle id="alert-dialog-title">
-                Section 2
+                Cryptography
             </DialogTitle>
             <DialogContent>
                 <DialogContentText id="alert-dialog-description">
