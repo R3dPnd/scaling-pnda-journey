@@ -84,7 +84,7 @@ export default function () {
                         using bits and pieces of know information to try to guess a users pwd. If passwords are dumped, a user can 
                         use tools to brute force the pwd hash to find user passwords once they have been exposed.
                     </p>
-                    Tools:
+                    <h5>PW Cracking Tools:</h5>
                     <ul>
                         <li>Jack the Ripped</li>
                         <li>Hashcat</li>
@@ -107,10 +107,20 @@ export default function () {
 
                     <p>
                         Threat Intelligence is a key part of the security lanscape. It's the process of gathering data to identify
-                        potential threats. 
+                        potential threats. Many tools for this are actualy open source and easily learned and utilized. Ampther aspect 
+                        is threat mapping. There are Real-time data streams that provide information about threats in the wild directly
+                        from security experts. These feeds could contain things like Domain Reputations, Known Malware, IP Addresses,
                     </p>
+                    <h5>OSTI Tools:</h5>
                     <ul>
-                        <li>OSTI: Open source threat intellignece is openly known threats.</li>
+                        <li>Maltego</li>
+                        <li>recon-ng</li>
+                        <li>Shodan.io/Censys.io</li>
+                    </ul>
+                    <h5>Vulnerability DBs:</h5>
+                    <ul>
+                        <li>MITRE: Common Vuln and Exposure(CVE)</li>
+                        <li>NVD(National Vulnerability Database): Security Content Automation Protocol</li>
                     </ul>
                 </DialogContentText>
             </DialogContent>
