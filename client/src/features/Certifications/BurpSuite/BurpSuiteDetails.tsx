@@ -1,5 +1,6 @@
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
 import BurpSuiteCert from "./BurpSuiteCert";
+import PortSwigger from "./PortSwigger";
 
 export default function () {
     return (
@@ -48,6 +49,7 @@ export default function () {
                             </AccordionSummary>
                             <AccordionDetails>
                                 <Typography>
+                                    <PortSwigger/>
                                 </Typography>
                             </AccordionDetails>
                         </Accordion>
