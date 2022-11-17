@@ -2,6 +2,10 @@ import Dialog from '@mui/material/Dialog';
 import { Button } from '@mui/material';
 import React from 'react';
 import SqlInjection from './SqlInjection';
+import Authentication from './Authentication';
+import DirectoryTraversal from './DirectoryTraversal';
+import CMDInjection from './CMDInjection';
+import BusinessLogicVuln from './BusinessLogicVuln';
 
 export default function () {
 
@@ -29,6 +33,23 @@ export default function () {
         setOpenSection3(false);
     };
 
+    const [openSection4, setOpenSection4] = React.useState(false);
+    const handleClickOpenSection4 = () => {
+        setOpenSection4(true);
+    };
+    const handleCloseSection4 = () => {
+        setOpenSection4(false);
+    };
+
+    
+    const [openSection5, setOpenSection5] = React.useState(false);
+    const handleClickOpenSection5 = () => {
+        setOpenSection5(true);
+    };
+    const handleCloseSection5 = () => {
+        setOpenSection5(false);
+    };
+
     return (
         <div>
             <Button variant="outlined" onClick={handleClickOpenSection1}>
@@ -44,7 +65,7 @@ export default function () {
             </Dialog>
 
             <Button variant="outlined" onClick={handleClickOpenSection2}>
-                Section 2
+                Authentication
             </Button>
             <Dialog
                 open={openSection2}
@@ -52,10 +73,11 @@ export default function () {
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
             >
+                <Authentication/>
             </Dialog>
 
             <Button variant="outlined" onClick={handleClickOpenSection3}>
-                Section 3
+                Directory Traversal
             </Button>
             <Dialog
                 open={openSection3}
@@ -63,6 +85,31 @@ export default function () {
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
             >
+                <DirectoryTraversal/>
+            </Dialog>
+
+            <Button variant="outlined" onClick={handleClickOpenSection4}>
+                CMD Injection
+            </Button>
+            <Dialog
+                open={openSection4}
+                onClose={handleCloseSection4}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <CMDInjection/>
+            </Dialog>
+
+            <Button variant="outlined" onClick={handleClickOpenSection5}>
+                CMD Injection
+            </Button>
+            <Dialog
+                open={openSection5}
+                onClose={handleCloseSection5}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <BusinessLogicVuln/>
             </Dialog>
         </div>
     )

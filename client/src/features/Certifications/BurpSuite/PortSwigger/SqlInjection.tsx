@@ -218,6 +218,70 @@ export default function () {
                 <li>Query user table for rows containing un and pw</li>
                 <li>Query for these values</li>
             </ol>
+
+            <h5>Lab 11: SQL injection attack, listing the database contents on Oracle</h5>
+            <p>
+                This lab contains an SQL injection vulnerability in the product category filter. The results from the query are returned in the 
+                application's response so you can use a UNION attack to retrieve data from other tables.The application has a login function, 
+                and the database contains a table that holds usernames and passwords. You need to determine the name of this table and the 
+                columns it contains, then retrieve the contents of the table to obtain the username and password of all users.To solve the lab, 
+                log in as the administrator user.
+            </p>
+            <p>
+                'UNION+SELECT+COLUMN_NAME,+NULL+FROM+all_tab_columns+WHERE+table_name+=+'USERS_JGNPHT'--
+            </p>
+
+            <h5>Blind SQL injection</h5>
+            <p>
+                Blind SQL injection results in changes to the db without directly showing these results on the returned page. This makes it more
+                difficult to determine if you are actually reaching the DB in the first place. This makes Union based attacks not as effective
+                as we can't see the results.
+            </p>
+            <p>
+
+            </p>
+
+            <h5>Lab 12:Blind SQL injection with conditional responses</h5>
+            <p></p>
+
+            <h5>Lab 13:</h5>
+            <p>
+                This lab contains a blind SQL injection vulnerability. The application uses a tracking cookie for analytics, and performs an SQL 
+                query containing the value of the submitted cookie.The results of the SQL query are not returned, and no error messages are 
+                displayed. But the application includes a "Welcome back" message in the page if the query returns any rows.The database contains a 
+                different table called users, with columns called username and password. You need to exploit the blind SQL injection vulnerability 
+                to find out the password of the administrator user.To solve the lab, log in as the administrator user.
+            </p>
+
+            <h5>Lab 14:</h5>
+            <p>
+                This lab contains a blind SQL injection vulnerability. The application uses a tracking cookie for analytics, and performs an SQL 
+                query containing the value of the submitted cookie.The results of the SQL query are not returned, and the application does not 
+                respond any differently based on whether the query returns any rows. If the SQL query causes an error, then the application returns 
+                a custom error message.The database contains a different table called users, with columns called username and password. You need to 
+                exploit the blind SQL injection vulnerability to find out the password of the administrator user.To solve the lab, log in as the 
+                administrator user.
+            </p>
+            <p>
+                The soluion here is to get the server to throw an error when you guess a corret character in the password. With a conditional 
+                statement below, when the substring of the password is the string the querry attempts to divide 1 by 0.
+                ||(SELECT+CASE+WHEN+SUBSTR(password,1,20)='rmbs0hvesazyxutnfz59§a§'+THEN+TO_CHAR(1/0)+ELSE+''+END+FROM+users+WHERE+username='administrator')||'
+            </p>
+
+            <h5>Lab 15: Blind SQL injection with out-of-band interaction</h5>
+            <p></p>
+
+            <h5>Lab 16: Blind SQL injection with out-of-band data exfiltration</h5>
+            <p>
+                This lab contains a blind SQL injection vulnerability. The application uses a tracking cookie for analytics, and performs an SQL 
+                query containing the value of the submitted cookie.The SQL query is executed asynchronously and has no effect on the application's 
+                response. However, you can trigger out-of-band interactions with an external domain.The database contains a different table called 
+                users, with columns called username and password. You need to exploit the blind SQL injection vulnerability to find out the password 
+                of the administrator user.To solve the lab, log in as the administrator user.
+            </p>
+            <p>
+
+            </p>
         </>
     )
 }
