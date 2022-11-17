@@ -1,11 +1,10 @@
-import { Box, Card, Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import Bio from "./Bio/Bio";
 import BioPic from "./Bio/BioPic";
 import Skills from "./Skills/Skills";
-import WorkHistory from "./Skills/WorkHistory/WorkHistory";
 
 import './resume.css'
-import { Link } from "react-router-dom";
+import Timeline from "./WorkHistory/Timeline";
 
 export default function () {
     return (
@@ -29,7 +28,7 @@ export default function () {
                     <BioPic />
                 </Grid>
                 <Grid xs={4}>
-                    <WorkHistory />
+                    <Timeline />
                 </Grid>
                 <Grid xs={8}>
                     <Skills />
