@@ -1,0 +1,12 @@
+.left-nav{
+    margin: 0px;
+    padding: 1em;
+    padding-top: 0;
+    position: absolute;
+    left: 0;
+    color: #fff;
+    transform: translate(15%,5%);
+    clip-path: polygon(0 0 , 100% 0, 100% 92%, 0 100%);
+    background-color: rgb(86, 86, 86);
+    /* border-radius: 1em; */
+}

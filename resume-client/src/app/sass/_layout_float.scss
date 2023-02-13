@@ -1,0 +1,48 @@
+@import "./constants";
+@import "./base";
+@import "./mixins";
+
+.row {
+    // max-width will allow your elements to adapt to the screen
+    max-width: $float-grid-width;
+    // margin 0 an dauto means the browser will set both left and right to the same based on the size of the viewport 
+    margin: 0 auto;
+
+    @include clearfix;
+
+    // Searches based on the beggining
+    [class^="col-"] {
+        float: left;
+        &:not(:last-child){
+            margin-right: $float-gutter-horizontal;
+        }
+    }
+
+    &:not(:last-child){
+        margin-bottom: $float-gutter-verticle;
+    }
+
+    .col-1-of-2{
+        width: calc((100% - #{$float-gutter-horizontal})/2);
+    }
+
+    .col-1-of-3{
+        width: calc((100% - (2*#{$float-gutter-horizontal}))/3);
+
+    }
+    .col-2-of-3{
+        width: calc((100% - (2*#{$float-gutter-horizontal}))/3*2 + #{$float-gutter-horizontal});
+    }
+
+    .col-1-of-4{
+        // float: left;
+        width: calc((100% - 3 * #{$float-gutter-horizontal})/4);
+    }
+    .col-2-of-4{
+        width: calc(2*((100% - 3*#{$float-gutter-horizontal})/4)  + #{$float-gutter-horizontal});
+    }
+
+    .col-3-of-4{
+        width: calc(3 * (100% - 3 * #{$float-gutter-horizontal})/4 + 2*#{$float-gutter-horizontal});
+    }
+}

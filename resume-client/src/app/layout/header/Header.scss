@@ -1,0 +1,71 @@
+  @import "../../sass/constants";
+  @import "../../sass/animations";
+
+  /*
+  * rgba(red, green, blue, opacity)
+  *
+  * 
+  * polygon(~four corner corrdinate moving clockwise)
+  * https://bennettfeely.com/clippy/
+  */
+  .header {
+    height: 10em;
+    background-image: linear-gradient( 
+      to right bottom, 
+      rgba($color-blue, 0.8), 
+      rgba($color-yellow, 0.5)), 
+    url(../../../img/wide-cyber-background.jpg);
+    background-size: cover;
+    background-position: left;
+    
+    position: relative;
+  }
+  
+  .logo-box {
+    position: absolute;
+    top: .5em;
+    left: .5em;
+    backface-visibility: hidden;
+  }
+  
+  .logo {
+    height: 6em;
+    animation: rotateIn 1s ease-out;
+  }
+  
+  .heading-primary {
+    color: #FFFF;
+    text-transform: uppercase;
+  
+    backface-visibility: hidden;
+  }
+  
+  .heading-primary-main {
+    display: block;
+    font-size: $font-large;
+    font-weight: 400;
+    letter-spacing: .3em;
+  
+    animation: moveInLeft 1s ease-out;
+  
+  }
+  
+  .heading-primary-sub {
+    display: block;
+    font-size: $font-default;
+    font-weight: 400;
+    letter-spacing: .25em;
+  
+    animation: moveInRight 1s ease-out;
+  }
+  
+  .text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /*This translates the area half way from teh top and the left to center*/
+    transform: translate(-50%, -50%);
+  }
+  
+
+  

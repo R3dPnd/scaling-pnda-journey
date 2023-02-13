@@ -1,0 +1,109 @@
+@keyframes rotateIn {
+
+  /*When the annimation starts*/
+  0% {
+    opacity: 0;
+    transform: rotate(90deg)
+  }
+
+  80% {
+    transform: rotate(180)
+  }
+
+  /*When the annimation ends*/
+  100% {
+    opacity: 1;
+    transform: rotate(360deg)
+  }
+}
+
+/*
+  * It's best to keep these animations to only 2 properties for brosser performance
+  */
+@keyframes moveInLeft {
+
+  /*When the annimation starts*/
+  0% {
+    opacity: 0;
+    transform: translate(-100px)
+  }
+
+  80% {
+    transform: translate(10px);
+  }
+
+  /*When the annimation ends*/
+  100% {
+    opacity: 1;
+    transform: translate(0)
+  }
+}
+
+@keyframes moveInRight {
+
+  /*When the annimation starts*/
+  0% {
+    opacity: 0;
+    transform: translate(100px)
+  }
+
+  80% {
+    transform: translate(-10px);
+  }
+
+  /*When the annimation ends*/
+  100% {
+    opacity: 1;
+    transform: translate(0)
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes wobbleLeftRight {
+  0% {
+    transform: skewX(7deg);
+  }
+
+  25% {
+    transform: skewX(-7deg);
+  }
+
+  50% {
+    transform: skewX(7deg);
+
+  }
+
+  75% {
+    transform: skewX(-7deg);
+  }
+
+  100% {
+    transform: skewX(7deg);
+
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
