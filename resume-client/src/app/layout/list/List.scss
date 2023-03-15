@@ -1,0 +1,16 @@
+@import "../../sass/constants";
+
+.list {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+    &-item {
+        text-align: center;
+        font-size: 1rem;
+        padding: .1rem;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-grey-light-1;
+        }
+    }
+}

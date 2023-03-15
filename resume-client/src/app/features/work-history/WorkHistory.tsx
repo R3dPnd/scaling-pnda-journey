@@ -2,7 +2,7 @@ import React from "react";
 import ArcadeScreen from "../../layout/arcade-screen/ArcadeScreen";
 import CompanyCoinContainer from "./CompanyCoinContainer/CompanyCoinContainer";
 
-import "./WorkHistory.scss"
+import "./work-history.scss"
 
 
 export default function WorkHistory() {

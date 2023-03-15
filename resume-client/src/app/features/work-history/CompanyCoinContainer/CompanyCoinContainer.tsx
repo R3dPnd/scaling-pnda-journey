@@ -2,11 +2,7 @@ import { Dispatch, SetStateAction } from 'react';
 import './CompanyCoinContainer.scss'
 import { CompanyCoin, getCompanyCoins } from './CompanyCoins';
 
-import { Icon } from 'react-icons-kit';
-import { home } from 'react-icons-kit/icomoon/home';
-import Card from '../../../layout/card/Card';
 import Coin from '../../../layout/coin/Coin';
-import ArcadeScreen from '../../../layout/arcade-screen/ArcadeScreen';
 
 interface Props {
     setCompany: Dispatch<SetStateAction<string | undefined>>;

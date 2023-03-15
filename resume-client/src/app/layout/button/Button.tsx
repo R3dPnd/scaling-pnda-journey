@@ -1,9 +1,13 @@
 import "./Button.scss"
 
-export default function Button(){
+interface Props{
+    link:string;
+}
+
+export default function Button(props: Props){
     return (
         <div className="button-box">
-            <a href="#" className="btn btn-white btn-animated">Click Me</a>
+            <a href={props.link} className="btn btn-white btn-animated">Click Me</a>
         </div>
     )
 }

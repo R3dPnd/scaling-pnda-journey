@@ -1,40 +1,95 @@
 @import '../../sass/constants';
 @import '../../sass/utility';
 @import '../../sass/layout_float';
-@import '../../sass/topography';
+@import '../../sass/typography';
 
-.card{
+.card {
     perspective: 150rem;
     -moz-perspective: 150rem;
     min-height: 15rem;
     position: relative;
-    height: 50rem;
+    height: 20rem;
+    border-radius: 100%;
 
     &-side {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 50rem;
+        height: 30rem;
         backface-visibility: hidden;
-        transition: all 1s;
-        
-        &-back {
-            background-color: $color-secondary;
+        transition: all 1s ease;
+        border-radius: 5%;
+
+        &-front {
+            // background-color: $color-secondary;
             transform: rotateY(180deg);
+
+
+            &-blue {
+                background-image: linear-gradient(to right bottom, $color-blue, $color-primary);
+            }
         }
 
         &-front {
-            background-color: $color-primary;
+            background-color: white;
+            color: $color-arcade-grey;
         }
 
+        &-back {
+            // background-color: $color-primary;
         
-    }
-    &:hover &-side-front {
-        transform: rotateY(180deg)
+            &-hearts {
+                // background-image: url(../../../img/heats.png), linear-gradient(to right bottom, $color-blue, $color-primary);
+                background-image: url(../../../img/heats.png);
+                // background-blend-mode: hard-light;
+                // -webkit-background-blend-mode: hard-light;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: $color-primary;
+            }
+
+            &-spades {
+                // background-image: url(../../../img/spades.png), linear-gradient(to right bottom, $color-secondary, $color-blue);
+                background-image: url(../../../img/spades.png);
+                // background-blend-mode: hard-light;
+                // -webkit-background-blend-mode: hard-light;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: $color-secondary;
+            }
+
+            &-clubs {
+                // background-image: url(../../../img/clubs.png), linear-gradient(to right bottom, $color-green, $color-cyan);
+                background-image: url(../../../img/clubs.png);
+                // background-blend-mode: hard-light;
+                // -webkit-background-blend-mode: hard-light;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: $color-tertiary;
+            }
+
+            &-diamonds {
+                // background-image: url(../../../img/diamonds.png), linear-gradient(to right bottom, $color-red, $color-accent);
+                background-image: url(../../../img/diamonds.png);
+                // background-blend-mode: hard-light;
+                // -webkit-background-blend-mode: hard-light;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: $color-accent;
+            }
+        }
+
+
     }
 
     &:hover &-side-back {
+        transform: rotateY(-180deg)
+    }
+
+    &:hover &-side-front {
         transform: rotateY(0deg)
     }
+
+     
 }
