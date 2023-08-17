@@ -1,8 +1,5 @@
 import './App.scss';
-import CertsContainer from './app/features/certs/CertsContainer';
-import Portfolio from './app/features/portfolio/Portfolio';
-import WorkHistory from './app/features/work-history/WorkHistory';
-import Entry from './app/layout/entry/Entry';
+import Resume from './app/features/resume/Resume';
 import Header from './app/layout/header/Header';
 import LeftNav from './app/layout/left-nav/LeftNav';
 
@@ -14,16 +11,19 @@ function App() {
   }
   return (
     <div className="App">
-      <Header/>
-{/* 
-      <LeftNav/> */}
-      <Portfolio/>
-
-      <main className="main-content">
-        {/* <FloatTest/> */}
-        {/* <WorkHistory/> */}
-        {/* <CertsContainer/> */}
-      </main>
+            <div className="container">
+                <header className="header">
+                    <Header/>
+                    <div className="content">
+                        <nav className="sidebar">
+                            <LeftNav/>
+                        </nav>
+                        <main className="primary-view">
+                            <Resume/>
+                        </main>
+                    </div>
+                </header>
+            </div>
     </div>
   );
 }

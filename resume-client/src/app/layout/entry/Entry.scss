@@ -8,7 +8,7 @@
     padding: 3rem 0;
  }
 
- .story {
+ .entry {
     width: 75%;
     margin: 0 auto;
     box-shadow: 0 3rem 6rem rgba(black, .1);
@@ -24,8 +24,8 @@
     }
 
     &-shape {
-      width: 7rem;
-      height: 7rem;
+      width: 8rem;
+      height: 8rem;
       float: left;
       // radius at xpos ypos
       -webkit-shape-outside: circle(50% at 50% 50%);
@@ -38,7 +38,7 @@
 
     &-icon {
       height: 100%;
-      transform: scale(1);
+      transform: scale(.8);
       backface-visibility: hidden;
       transition: .5s;
 
@@ -48,21 +48,12 @@
          left: 50%;
          transform: translate(-50%, 20%);
          opacity: 0;
-         color: white;
+         color: black;
          text-transform: uppercase;
-         font-size: 1.5rem;
+         font-size: 1rem;
          text-align: center;
          transition: .5s;
          backface-visibility: hidden;
       }
-    }
-    :hover &-icon-caption {
-      opacity: 1;
-      transform: translate(-50%, -50%);
-    }
-
-    :hover &-icon {
-      height: 100%;
-      transform: scale(.8);
     }
  } 

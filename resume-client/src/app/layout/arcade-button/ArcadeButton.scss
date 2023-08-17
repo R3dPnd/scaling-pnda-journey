@@ -1,8 +1,12 @@
 @import "../../sass/constants";
 @import "../../sass/animations";
+@import "../../sass/utility";
 
 .arcade-button-container {
     margin: auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 
     top: 50%;
     -ms-transform: translateY(-50%);
@@ -11,6 +15,7 @@
 
 @mixin buttonbox($color) {
     text-align: center;
+    margin: auto;
 
     display: inline-block;
     height: 6em;
@@ -28,12 +33,10 @@
 }
 
 .arcade-button-label {
-    display: block;
-    display: inline-block;
+    // margin: auto;
     top: 50%;
-    -ms-transform: translateY(-120%);
-    transform: translateY(-120%);
-    padding-left: .5em;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-0%);
 }
 
 /*
@@ -45,7 +48,6 @@
 .arcade-btn{
     text-transform: uppercase;
     text-decoration: none;
-    /*top and bottom, then left and right*/
     padding: 15px 40px;
     display: inline-block;
     border-radius: 100px;

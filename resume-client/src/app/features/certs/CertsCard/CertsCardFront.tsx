@@ -30,9 +30,6 @@ export default function CertsCardFront(props: Props) {
                 <h4>
                     {props.cert.date}
                 </h4>
-                <p>
-                    {props.cert.description}
-                </p>
             </div>
 
         </>

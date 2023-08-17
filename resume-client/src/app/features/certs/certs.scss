@@ -1,9 +1,16 @@
 @import '../../sass/constants';
 @import '../../sass/utility';
-@import '../../sass/layout_float';
 @import '../../sass/typography';
+@import '../../sass/layout_grid';
 
 
-.section-certs {
-    padding: 5rem 0;
+.certifications-container {
+
+}
+
+.certification-card-container{
+    width: 100%;
+}
+
+.certification-card{
 }

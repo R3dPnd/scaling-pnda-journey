@@ -1,13 +1,15 @@
 import "./Button.scss"
 
 interface Props{
-    link:string;
+    children: any;
+    className: string;
 }
 
 export default function Button(props: Props){
+    let clazz = "btn btn-white btn-animated" + props.className;
     return (
         <div className="button-box">
-            <a href={props.link} className="btn btn-white btn-animated">Click Me</a>
+            <a className={clazz}>{props.children}</a>
         </div>
     )
 }

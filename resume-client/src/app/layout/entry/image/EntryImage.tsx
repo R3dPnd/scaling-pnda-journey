@@ -1,12 +1,8 @@
 import "./EntryImage.scss"
-
-export interface Image {
-    image: string;
-    caption: string;
-}
+import { EntryImageEntity } from "./EntryImageEntity";
 
 interface Props {
-    entryImage: Image;
+    entryImage: EntryImageEntity;
 }
 export default function EntryImage(props:Props) {
     return (

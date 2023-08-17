@@ -12,7 +12,7 @@ export default function ArcadeButton(props: Props) {
             <div className={getButtonBoxClass(props.color)}>
                 <a href="#" className={getButtonClass(props.color)} onClick={props.onClick}></a>
             </div>
-            <h3 className="arcade-button-label">{props.label}</h3>
+            <h3 className="arcade-button-label u-center-text">{props.label}</h3>
         </div>
     )
 }

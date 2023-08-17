@@ -18,7 +18,7 @@ const CompanyCoins: CompanyCoin[] = [
     {
         alt : "infosys-coin",
         srcName : require("../../../../img/coin-infosys.png"),
-        name: "InfoSys"
+        name: "Infosys"
     },
     {
         alt : "revature-coin",
@@ -28,6 +28,5 @@ const CompanyCoins: CompanyCoin[] = [
 ]
 
 export function getCompanyCoins(): CompanyCoin[] {
-    console.log(CompanyCoins);
     return CompanyCoins;
 }

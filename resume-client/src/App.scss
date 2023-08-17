@@ -1,0 +1,34 @@
+@import './app/sass/constants';
+@import './app/sass/utility';
+@import './app/sass/layout_flexbox';
+@import './app/sass/typography';
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+
+    min-height: 15rem;
+}
+
+.header {
+    height: 7rem;
+    background-color: aqua;
+}
+
+.content {
+    display: flex;
+    background-color: $color-galaxy-purple;
+}
+
+.sidebar {
+    // background-color: $color-space-purple;
+    // grow,shrink, basis
+    flex: 0 0 12%;
+    margin: 0 auto;
+}
+
+.primary-view {
+    background-color: $color-space-purple;
+    width: 100%;
+}

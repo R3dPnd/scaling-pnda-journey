@@ -1,4 +1,5 @@
 import Entry, { Blerb } from "../../../layout/entry/Entry"
+import EntryImageViewer from "../../../layout/entry/image/EntryImageViewer"
 import "./Project.scss"
 import { ProjectDescription } from "./ProjectDescription"
 
@@ -12,10 +13,11 @@ export default function Project(props: Props) {
         subHeading: props.projectDescription.subTitle,
         story: props.projectDescription.description,
         icon: require('../../../../img/bg-red-pnd.png'),
-        iconCaption: "react"
+        iconCaption: "scaling-pnd-journy"
     }
     return (
         <>
+            <EntryImageViewer images={props.projectDescription.photos}/>
             <Entry blerb={blerb}/>
         </>
     )

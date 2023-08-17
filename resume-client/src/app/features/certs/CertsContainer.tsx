@@ -4,27 +4,22 @@ import CertsCardBack from "./CertsCard/CertsCardBack"
 import CertsCardFront from "./CertsCard/CertsCardFront"
 
 import "./Certs.scss"
+import HeadingHighlight from "../../layout/typography/HeadingHightlight"
 
 export default function CertsContainer() {
     return (
-        <>
+        <div className="certifications-container">
+            <section className="u-center-text">
+                <h2 className="certification-section-title">Certificates</h2>
 
-            <section className="section-certs u-center-text">
-                <div className="row">
-                    <div className="col-1-of-4">
+                <h3 className="certification-section-title">Programming</h3>
+                <div className="certification-card-container flex-row-container ">
+                    <div className="certification-card flex-item">
                         <Card style={CardStyle.diamonds} front={<CertsCardFront cert={getCerts()[0]} />} back={<CertsCardBack />}></Card>
                     </div>
-                    <div className="col-1-of-4">
-                        <Card style={CardStyle.spades} front={<CertsCardFront cert={getCerts()[0]}/>}  back={<CertsCardBack />}></Card>
-                    </div>
-                    <div className="col-1-of-4">
-                        <Card style={CardStyle.clubs} front={<CertsCardFront cert={getCerts()[0]}/>} back={<CertsCardBack />}></Card>
-                    </div>
-                    <div className="col-1-of-4">
-                        <Card style={CardStyle.hearts} front={<CertsCardFront cert={getCerts()[0]}/>}  back={<CertsCardBack />}></Card>
-                    </div>
+
                 </div>
             </section>
-        </>
+        </div>
     )
 }

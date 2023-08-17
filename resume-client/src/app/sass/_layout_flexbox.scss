@@ -1,0 +1,44 @@
+/*
+    Flexbox
+
+    A relativly new modulle in css3 that makes it eaier to align elements to one another, in different
+    directions and oders. The main idea is to give the container the ability to adjust ti the screnn 
+    without specific measurements.
+
+    The element which we use flex within is called a flex container that has a display of flex. 
+    
+    The container has propeties...
+        * flex-direction: row | row-reverse | column | column-reverse
+        * flex-wrap: wrap | wrap-reverse
+        * justyify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+        * align-items
+
+    The flex itens have the following 
+        * align-self: auto | stretch | flex-start | flex-end | center | baseline
+        * order: int
+        * flex-grow: int
+        * flex-shrink: int
+        * flex-basis: auto | length
+*/
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center  ;
+}
+
+.flex-row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.flex-column-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-item {
+    flex-grow: 1;
+}

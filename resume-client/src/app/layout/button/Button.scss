@@ -37,13 +37,11 @@
 }
 
 .btn:hover {
-    transform: translateY(.1em); 
     /* x y blur color */
     box-shadow: 0 .5em 1em rgba(0,0,0,.1);
 }
 
 .btn:active {
-    transform: translateY(.2em);
     box-shadow: 0 .2em .5em rgba(0,0,0,.1);
 }
 

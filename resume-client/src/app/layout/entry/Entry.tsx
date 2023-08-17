@@ -26,12 +26,12 @@ export default function Entry(props: Props) {
                 </h3>
             </div>
             <div className="row">
-                <div className="story">
-                    <figure className="story-shape">
-                        <img src={props.blerb.icon}  alt="Story Icon" className="story-icon" />
-                        <figcaption className="story-icon-caption" >{props.blerb.iconCaption}</figcaption>
+                <div className="entry">
+                    <figure className="entry-shape">
+                        <img src={props.blerb.icon}  alt="Story Icon" className="entry-icon" />
+                        <figcaption className="entry-icon-caption" >{props.blerb.iconCaption}</figcaption>
                     </figure>
-                    <div className="story-text">
+                    <div className="entry-text">
                         <h3 className="heading-tertiary u-margin-bottom-small">
 
                         </h3>
@@ -39,7 +39,6 @@ export default function Entry(props: Props) {
                             {props.blerb.story}
                         </p>
                     </div>
-
                 </div>
             </div>
         </section>
