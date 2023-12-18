@@ -1,0 +1,144 @@
+@import "../../sass/constants";
+@import "../../sass/animations";
+@import "../../sass/utility";
+
+.arcade-button-container {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin buttonbox($color) {
+    text-align: center;
+    margin: auto;
+
+    display: inline-block;
+    height: 6em;
+    width: 6em;
+    border-radius: 80%;
+    border: .1em solid rgb(0, 0, 0);
+    background-color: $color;
+
+    justify-content: center;
+
+    margin-top: 1em;
+
+    box-shadow: inset .5 1em 1em darken(black, 10%), inset 0 .1em 1em rgba(255, 255, 255, 0.5), 0 5px 10px rgba(0, 0, 0, 0.75), 0 10px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset .5 1em 10px darken($color, 10%), inset 0 .1em 2em rgba(255, 255, 255, 0.5), 0 5px 10px rgba(0, 0, 0, 0.75), 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.arcade-button-label {
+    // margin: auto;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-0%);
+}
+
+/*
+*   State of a sudo element
+*   These are styles under special conditions
+*   link has to do when it is an anchor tag
+*   visited is after the linkhas been clicked
+*/
+.arcade-btn{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+
+    display: block;
+    height: 5em;
+    width: 3em;
+    border-radius: 80%;
+    border: .1em solid rgb(0, 0, 0);
+
+    position: relative;
+
+    margin: auto;
+
+    top: 45%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    
+    &:active {
+        /* transform: translateY(.1em); */
+        box-shadow: 15px 15px 25px rgba(0, 0, 0, .1);
+        top: 50%;
+    
+    }
+
+    &::after {
+        content: "";
+        border-radius: 100%;
+    
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    
+        transform: scale(1.2);
+        opacity: 0;
+    }
+
+    &:hover::after {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+@mixin btnshadow($color){
+    -webkit-box-shadow: inset 0 -1em 1em darken($color, 20%), inset 0 1em 2em rgba(255, 255, 255, 0.5), 0 1em 2em rgba(0, 0, 0, 1), 0 10em 10em rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 -1em 1em darken($color, 20%), inset 0 1em 1em rgba(255, 255, 255, 0.5), 0 1em 2em rgba(0, 0, 0, 1), 0 10em 10em rgba(0, 0, 0, 0.5);
+}
+
+.arcade-btn-red {
+    background-color: $color-red;
+    @include btnshadow($color-red)
+}
+
+.arcade-button-box-red {
+    @include buttonbox($color-red)
+}
+
+.arcade-btn-blue {
+    background-color: $color-blue;
+    @include btnshadow($color-blue)
+}
+
+.arcade-button-box-blue {
+    @include buttonbox($color-blue)
+}
+
+.arcade-btn-green {
+    background-color: $color-green;
+    @include btnshadow($color-green)
+}
+
+.arcade-button-box-green {
+    @include buttonbox($color-green)
+}
+
+.arcade-btn-yellow {
+    background-color: $color-yellow;
+    @include btnshadow($color-yellow)
+}
+
+.arcade-button-box-yellow {
+    @include buttonbox($color-yellow)
+}
+
+.arcade-btn-cyan {
+    background-color: $color-cyan;
+    @include btnshadow($color-cyan)
+}
+
+.arcade-button-box-cyan {
+    @include buttonbox($color-cyan)
+}

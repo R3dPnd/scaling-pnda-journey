@@ -1,0 +1,46 @@
+@import '../../../sass/constants';
+@import '../../../sass/utility';
+@import '../../../sass/layout_float';
+@import '../../../sass/typography';
+@import '../../../sass/animations';
+
+.container{
+    position: relative;
+    width: 100%;
+    &__photo{
+        // box-shadow: 0 1.5rem 4rem rgba(black, 40%);
+        background: transparent;
+        border-radius: 2px;
+        // position: absolute;
+        transition: all 5s;
+
+        outline-offset: 2rem;
+        &:hover {
+            // outline: 1.5rem solid $color-accent;
+            // transform: scale(1.05);
+            // box-shadow: 0 3rem 4rem rgba(black, 50%);
+            // z-index: 20;
+            // animation: wobbleLeftRight 6s infinite;
+            // transition: all 2s;
+        }
+
+        &:active {
+            transform: scale(3);
+            // transform: rotateY(360deg)
+
+        }
+    }
+
+    &__photo:not(:hover) { 
+        transform: scale(.9);
+    }
+
+}
+.coin-container{
+    transform: rotateY(360deg)
+
+}
+.credits {
+    text-transform: uppercase;
+    animation: blink 5s infinite;
+}

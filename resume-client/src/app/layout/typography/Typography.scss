@@ -1,0 +1,40 @@
+@import "../../sass/constants";
+
+.heading-highlight {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    top: 12rem;
+    text-align: right;
+    right: 2rem;
+    width: 75%;
+}
+
+.heading-span {
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+
+    &-red { 
+        background-image: linear-gradient(to right bottom, rgba($color-primary, .85), rgba($color-secondary, .85));
+    }
+
+    &-orange { 
+        background-image: linear-gradient(to right bottom,
+        rgba($color-primary, .85),
+        rgba($color-secondary, .85));
+    }
+
+    &-blue {
+        background-image: linear-gradient(to right bottom,
+        rgba($color-primary, .85),
+        rgba($color-secondary, .85));
+    }
+
+    &-green {
+        background-image: linear-gradient(to right bottom,
+        rgba($color-primary, .85),
+        rgba($color-secondary, .85));
+    }
+}

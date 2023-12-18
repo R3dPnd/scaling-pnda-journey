@@ -1,0 +1,75 @@
+@import "../../../sass/constants";
+@import "../../../sass/utility";
+@import "../../button/Button.scss";
+
+
+.section-stories {
+    padding: 3rem 0;
+}
+
+.entry {
+    &-image {
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+
+        &-container {
+            position: relative;
+            color: white;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            text-align: center;
+            height: 8rem;
+        }
+
+    }
+
+    &-image-caption {
+        transition: .5s;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        color: black;
+    }
+
+    :hover &-image-caption {
+        opacity: 1;
+        transform: translate(0%, 100%);
+    }
+}
+
+.entry-image-arrow-container {
+    width: 100%;
+}
+
+.entry-image-arrow {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    transform: translate(-50%, 20%);
+    transition: .5s;
+    font-size: 2rem;
+
+    border-radius: 15rem;
+    height: 3rem;
+    
+    opacity: 0;
+
+    &-left {
+        left: 15rem;
+        transform: rotate(180deg);
+    }
+
+    &-right {
+        right: 15rem;
+    }
+
+    :hover &-right {
+        opacity: 1;
+    }
+
+    :hover &-left {
+        opacity: 1;
+    }
+}
+

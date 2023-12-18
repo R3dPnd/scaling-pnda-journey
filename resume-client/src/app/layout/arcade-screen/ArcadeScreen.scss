@@ -1,0 +1,16 @@
+@import "../../sass/constants";
+@import '../../sass/utility';
+
+.arcade-screen {
+    // position: absolute;
+    width: 80%;
+    height: 20rem;
+    overflow-y: scroll;
+    background-color: black;   
+    border: 10px;
+    border-color: $color-arcade-grey;   
+    box-shadow: 0 50rem 100rem darken($color-arcade-green, 5%);
+    margin: 1rem;
+    /*This translates the area half way from teh top and the left to center*/
+    transform: translate(10%, 0%);
+}

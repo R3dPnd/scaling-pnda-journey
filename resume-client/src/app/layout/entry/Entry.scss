@@ -1,0 +1,59 @@
+ @import "../../sass/constants";
+ @import "../../sass/utility";
+ @import "../../sass/utility";
+
+
+ 
+ .section-stories {
+    padding: 3rem 0;
+ }
+
+ .entry {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba(black, .1);
+    background-color: $color-space-purple;
+    color: white;
+    padding: 2rem;
+    padding-left: 9rem;
+    font-size: $font-default;
+    transform: skewX(-12deg);
+
+    & > * {
+      transform: skewX(12deg);
+    }
+
+    &-shape {
+      width: 8rem;
+      height: 8rem;
+      float: left;
+      // radius at xpos ypos
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      transform: translateX(-3rem) skewX(12deg);
+      position: relative;
+    }
+
+    &-icon {
+      height: 100%;
+      transform: scale(.8);
+      backface-visibility: hidden;
+      transition: .5s;
+
+      &-caption {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, 20%);
+         opacity: 0;
+         color: black;
+         text-transform: uppercase;
+         font-size: 1rem;
+         text-align: center;
+         transition: .5s;
+         backface-visibility: hidden;
+      }
+    }
+ } 

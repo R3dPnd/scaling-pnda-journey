@@ -1,0 +1,15 @@
+/*
+    CSS Grid
+*/
+
+/*
+    Grid layouts are broken down into rows and columns the lines between them are called
+    the grid line and the spce between is called the gutter. 
+*/
+
+.grid-home {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-row: 1fr 1fr 1fr;  
+    grid-gap: 1rem;
+}

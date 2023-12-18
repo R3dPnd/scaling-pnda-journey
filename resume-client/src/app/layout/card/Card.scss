@@ -1,0 +1,80 @@
+@import '../../sass/constants';
+@import '../../sass/utility';
+@import '../../sass/layout_float';
+@import '../../sass/typography';
+
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    min-height: 15rem;
+    position: relative;
+    height: 20rem;
+    border-radius: 100%;
+
+    &-side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6rem;
+        height: 9rem;
+        backface-visibility: hidden;
+        transition: all 1s ease;
+        border-radius: 5%;
+
+        &-front {
+            // background-color: $color-secondary;
+            transform: rotateY(180deg);
+
+
+            &-blue {
+                background-image: linear-gradient(to right bottom, $color-blue, $color-primary);
+            }
+        }
+
+        &-front {
+            background-color: white;
+            color: $color-arcade-grey;
+        }
+
+        &-back {
+            // background-color: $color-primary;
+        
+            &-hearts {
+                background-image: url(../../../img/heats.png);
+                background-size: contain;
+                background-color: $color-primary;
+            }
+
+            &-spades {
+                background-image: url(../../../img/spades.png);
+                background-size: contain;
+                background-color: $color-secondary;
+            }
+
+            &-clubs {
+                background-image: url(../../../img/clubs.png);
+                background-size: contain;
+                background-color: $color-tertiary;
+            }
+
+            &-diamonds {
+                background-image: url(../../../img/diamond.png);
+                background-size: contain;
+                background-color: $color-accent;
+                background-repeat:space;
+            }
+        }
+
+
+    }
+
+    &:hover &-side-back {
+        transform: rotateY(-180deg)
+    }
+
+    &:hover &-side-front {
+        transform: rotateY(0deg)
+    }
+
+     
+}
